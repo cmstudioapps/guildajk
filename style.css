@@ -244,3 +244,35 @@
 #menu-btn:hover {
     transform: scale(1.1);
 }
+
+.videos-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden; /* Garante que só role horizontalmente */
+    gap: 16px;
+    padding: 10px;
+    max-width: 100%; /* Limita ao tamanho do body */
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* Rola suavemente */
+}
+
+.videos-container iframe {
+    flex-shrink: 0; /* Impede que os iframes sejam encolhidos */
+    width: 300px; /* Tamanho fixo */
+    height: 200px; /* Tamanho fixo */
+    border: none;
+}
+
+/* Personalização do scrollbar */
+.videos-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.videos-container::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
+.videos-container::-webkit-scrollbar-track {
+    background: transparent;
+}
