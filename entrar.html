@@ -180,7 +180,7 @@
         const idade = document.getElementById("idade").value;
         const posicao = document.getElementById("posicao").value;
         const mensagem = document.getElementById("mensagem").value;
-
+        const user = navigator.userAgent
         // Verifica se todos os campos foram preenchidos
         if (!nome || !nickname || !idade || !posicao || !mensagem) {
             alert("Por favor, preencha todos os campos.");
@@ -191,7 +191,7 @@
         const numeroWhatsApp = "5587991683353"; // Substitua pelo número desejado (inclua o código do país, como 55 para Brasil)
 
         // Mensagem formatada
-        const mensagemWhatsApp = `Olá, sou ${nome}!\n\nNickname: ${nickname}\nIdade: ${idade}\nPosição desejada: ${posicao}\nMotivo: ${mensagem}\n \n*Dispositivo:* \n ${navigator.userAgent}`;
+        const mensagemWhatsApp = `Olá, sou ${nome}!\n\nNickname: ${nickname}\nIdade: ${idade}\nPosição desejada: ${posicao}\nMotivo: ${mensagem}\n \n*Dispositivo:* \n \n${user}`;
 
         // URL do WhatsApp com a mensagem
         const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagemWhatsApp)}`;
