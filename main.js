@@ -21,7 +21,7 @@ fetch(url)
     postsArray.forEach(post => {
       
       
-      htmlContent = `
+      htmlContent += `
         <div class="post">
           <img src="${post.IMG}" alt="Imagem do post" height="400px">
           <p>${post.LG}</p>
@@ -33,10 +33,10 @@ fetch(url)
     });
     
     
-if (!htmlContent.includes("script")) {
+
   
     feed.innerHTML = htmlContent;
-}
+
   })
   .catch(error => {
     console.error("Erro ao buscar dados:", error);
