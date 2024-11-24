@@ -39,7 +39,7 @@ function shar() {
       compartilhou = 1
       localStorage.setItem("compartilhou",compartilhou)
       
-      pontos = pontos +2
+      pontos = pontos +3
       
       localStorage.setItem("pontos",pontos)
       
