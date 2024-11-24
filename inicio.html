@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guilda JK</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Guilda JK</h1>
+        <button id="menu-btn" onclick="toggleSidebar()">☰</button>
+    </header>
+
+    <nav id="sidebar" class="oculto">
+        <ul>
+            <li><a href="sobre.html">Sobre</a></li>
+            
+            <li><a href="pontos.html">Carteira</a></li>
+            <li><a href="#regras">Regras</a></li>
+        </ul>
+    </nav>
+
+    <main onclick="closeSidebar()">
+        <div class="card" id="convite">
+            <img src="banner.png" alt="Banner da Guilda">
+            <h2>Junte-se à Guilda JK!</h2>
+            <p>
+                Faça parte de uma comunidade de jogadores apaixonados por desafios, torneios épicos e aventuras incríveis. 
+                Mostre suas habilidades e conquiste seu lugar no topo!
+            </p>
+            <button onclick="window.location.href='entrar.html'">Quero Entrar!</button><br>
+           <br> <button onclick="jaSou()">Ja sou da guilda!</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>cm Studio | Guilda JK</p>
+    </footer>
+
+    <script>
+    let souGuilda = localStorage.getItem("souGuilda")
+    
+    if(souGuilda) {
+      
+      document.getElementById("convite").style.display = "none"
+      
+      
+    }
+    
+    function jaSou() {
+      
+      souGuilda = 1
+      
+      localStorage.setItem("souGuilda",souGuilda)
+      location.reload()
+      
+      
+    }
+    
+        function toggleSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            sidebar.classList.toggle("aberto");
+        }
+
+        function closeSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            sidebar.classList.remove("aberto");
+        }
+    </script>
+</body>
+</html>

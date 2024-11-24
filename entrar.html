@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição - Guilda JK</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #001f3f 0%, #001030 100%);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            background: rgba(0, 45, 98, 0.9);
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #00bfff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px #00bfff, 0 0 20px #0074d9;
+        }
+
+        main {
+            flex: 1;
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .form-container {
+            background: rgba(0, 51, 102, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .form-container h2 {
+            font-size: 2rem;
+            color: #00bfff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-container label {
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        .form-container input,
+        .form-container select,
+        .form-container textarea {
+            padding: 10px;
+            border: 1px solid #0074d9;
+            border-radius: 5px;
+            font-size: 1rem;
+            color: #001f3f;
+            background: #f5f5f5;
+        }
+
+        .form-container textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        .form-container button {
+            background: #00bfff;
+            color: #001f3f;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background: #0074d9;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: #001030;
+            color: #ccc;
+            text-align: center;
+            padding: 15px 0;
+            width: 100%;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Inscrição na Guilda JK</h1>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <h2>Formulário de Inscrição</h2>
+            <form action="#" method="POST">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                
+                <label for="nickname">Nickname no Free Fire:</label>
+                <input type="text" id="nickname" name="nickname" placeholder="Digite seu nickname" required>
+                
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" name="idade" min="12" placeholder="Digite sua idade" required>
+                
+                <label for="posicao">Posição Desejada:</label>
+                <select id="posicao" name="posicao" required>
+                    <option value="">Selecione...</option>
+                    <option value="líder">Líder</option>
+                    <option value="capitão">Capitão</option>
+                    <option value="jogador">Jogador</option>
+                </select>
+                
+                <label for="mensagem">Por que deseja entrar na Guilda?</label>
+                <textarea id="mensagem" name="mensagem" placeholder="Escreva uma breve mensagem..." required></textarea>
+                
+                <button type="submit">Enviar Inscrição</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Guilda JK. Todos os direitos reservados.</p>
+    </footer>
+    
+    <script>
+    
+    let souGuilda = localStorage.getItem ("souGuilda")
+    
+    
+    document.querySelector("form").addEventListener("submit", function (event) {
+        event.preventDefault(); // Impede o envio padrão do formulário
+        
+        souGuilda = 1
+      
+      localStorage.setItem("souGuilda",souGuilda)
+
+        // Coleta os valores preenchidos no formulário
+        const nome = document.getElementById("nome").value;
+        const nickname = document.getElementById("nickname").value;
+        const idade = document.getElementById("idade").value;
+        const posicao = document.getElementById("posicao").value;
+        const mensagem = document.getElementById("mensagem").value;
+
+        // Verifica se todos os campos foram preenchidos
+        if (!nome || !nickname || !idade || !posicao || !mensagem) {
+            alert("Por favor, preencha todos os campos.");
+            return;
+        }
+
+        // Número de WhatsApp que receberá os dados
+        const numeroWhatsApp = "5587991683353"; // Substitua pelo número desejado (inclua o código do país, como 55 para Brasil)
+
+        // Mensagem formatada
+        const mensagemWhatsApp = `Olá, sou ${nome}!\n\nNickname: ${nickname}\nIdade: ${idade}\nPosição desejada: ${posicao}\nMensagem: ${mensagem}`;
+
+        // URL do WhatsApp com a mensagem
+        const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagemWhatsApp)}`;
+
+        // Redireciona o usuário para o WhatsApp
+        window.open(url, "_blank");
+    });
+</script>
+</body>
+</html>

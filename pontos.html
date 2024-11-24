@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carteira - Guilda JK</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #001f3f 0%, #001030 100%);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            background: rgba(0, 45, 98, 0.9);
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #00bfff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px #00bfff, 0 0 20px #0074d9;
+        }
+
+        main {
+            flex: 1;
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .wallet-container {
+            background: rgba(0, 51, 102, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .wallet-container h2 {
+            font-size: 2rem;
+            color: #00bfff;
+            margin-bottom: 20px;
+        }
+
+        .wallet-points {
+            font-size: 3rem;
+            color: #00ff7f;
+            margin: 20px 0;
+            font-weight: bold;
+            text-shadow: 0 0 15px #00ff7f, 0 0 25px #00ff7f;
+        }
+
+        .wallet-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .wallet-buttons button {
+            background: #00bfff;
+            color: #001f3f;
+            font-size: 1rem;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .wallet-buttons button:hover {
+            background: #0074d9;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: #001030;
+            color: #ccc;
+            text-align: center;
+            padding: 15px 0;
+            width: 100%;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Carteira de Pontos - Guilda JK</h1>
+    </header>
+
+    <main>
+        <div class="wallet-container">
+            <h2 id="h2">Bem-vindo, [Nome do Usuário]!</h2>
+            <p>Seus pontos acumulados:</p>
+            <div class="wallet-points" id="pontos">0</div>
+            <div class="wallet-buttons">
+                <button onclick="shar()">Compartilhar</button>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>cm Studio | Guilda JK</p>
+    </footer>
+
+    <script>
+        let pontos = Number(localStorage.getItem("pontos"));
+        atualizarPontos()
+
+        let h2 = document.getElementById("h2")
+         h2.textContent = "Bem vindo(a) "+ localStorage.getItem("nome")
+        function atualizarPontos() {
+            document.getElementById("pontos").textContent = pontos || 0;
+        }
+        
+        
+        
+    </script>
+    
+    <script src="pontos.js">pontos.js</script>
+</body>
+</html>

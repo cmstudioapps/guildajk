@@ -1,0 +1,17 @@
+{
+  "name": "GUILDA JK",
+  "short_name": "GUILDA JK",
+  "description": "",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#00bfff",
+  "icons": [
+    {
+      "src": "https://i.imgur.com/7ePZsgx.jpeg",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
+
