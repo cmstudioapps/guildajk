@@ -11,7 +11,7 @@ if (dia != diaAnterior) {
   diaAnterior = dia
   localStorage.setItem("diaAnterior",diaAnterior)
 
-if(localStorage.getItem("compartilhou") === 1 || !localStorage.getItem("compartilhou") ) {
+if(localStorage.getItem("compartilhou") == 1 || !localStorage.getItem("compartilhou") ) {
 compartilhou = 0
 localStorage.setItem("compartilhou",compartilhou)
 }
