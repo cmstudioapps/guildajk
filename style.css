@@ -372,28 +372,28 @@
 
 .btn-compartilhar {
   display: inline-block;
-  background: linear-gradient(45deg, #2b2b2b, #606060); /* Tons de aço/metálico */
-  border: 2px solid #daa520; /* Cor dourada medieval */
+  background: linear-gradient(45deg, #003366, #0066cc); /* Tons de azul escuro e médio */
+  border: 2px solid #00d1ff; /* Azul neon como destaque */
   border-radius: 8px;
   padding: 12px 24px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8), 0 0 8px rgba(218, 165, 32, 0.5); /* Sombra com brilho dourado */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8), 0 0 8px rgba(0, 209, 255, 0.5); /* Sombra com brilho azul neon */
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .btn-compartilhar a {
-  color: #fff; /* Texto claro */
-  font-family: 'Cinzel', serif; /* Fonte com estilo medieval */
-  font-size: 18px;
+  color: #ffffff; /* Texto claro */
+  font-family: 'Orbitron', sans-serif; /* Fonte futurista */
+  font-size: 16px;
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 1.5px; /* Espaçamento para um visual mais refinado */
+  letter-spacing: 1.2px; /* Espaçamento leve para sofisticação */
 }
 
 .btn-compartilhar:hover {
   transform: scale(1.1); /* Destaque maior no hover */
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.9), 0 0 12px rgba(218, 165, 32, 0.8); /* Aumentar o brilho dourado */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.9), 0 0 12px rgba(0, 209, 255, 0.8); /* Aumentar o brilho no hover */
 }
 
 .btn-compartilhar:hover a {
-  color: #daa520; /* Destaque dourado no texto */
+  color: #00d1ff; /* Azul neon no texto */
 }
