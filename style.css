@@ -369,3 +369,30 @@
 .hidden {
     display: none;
 }
+
+.btn-compartilhar {
+  display: inline-block;
+  background: linear-gradient(45deg, #1a1a1d, #4e4e50);
+  border: 2px solid #ff4500; /* Cor de destaque */
+  border-radius: 8px;
+  padding: 10px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-compartilhar a {
+  color: #fff;
+  font-family: 'Orbitron', sans-serif; /* Fonte futurista/gamer */
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.btn-compartilhar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(255, 69, 0, 0.8);
+}
+
+.btn-compartilhar:hover a {
+  color: #ff4500; /* Destaque na cor */
+}
