@@ -15,7 +15,7 @@ if(localStorage.getItem("compartilhou") == 1 || !localStorage.getItem("compartil
 compartilhou = 0
 localStorage.setItem("compartilhou",compartilhou)
 }
-  
+  localStorage.removeItem("clicouSaiba")
   
 }
 
