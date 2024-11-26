@@ -112,6 +112,15 @@
             const sidebar = document.getElementById("sidebar");
             sidebar.classList.remove("aberto");
         }
+
+// Recuperar os pontos do localStorage e exibir
+function carregarPontos() {
+    const pontos = localStorage.getItem("pontos") || 0; // Define como 0 caso não existam pontos
+    document.getElementById("pontos").innerText = pontos;
+}
+
+// Chama a função ao carregar a página
+carregarPontos();
     </script>
     <script src="main.js">main.js</script>
 </body>
