@@ -97,6 +97,13 @@
     </footer>
 <script src="pontos.js"></script>
     <script>
+// Alternar visibilidade do card de informações
+function toggleInfoCard() {
+    const infoCard = document.getElementById("info-card");
+    infoCard.classList.toggle("hidden");
+}
+
+
     let souGuilda = localStorage.getItem("souGuilda")
     
     if(souGuilda) {
