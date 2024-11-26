@@ -360,7 +360,7 @@
     border-radius: 8px;
     padding: 10px 20px;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 20vh;
 }
 
 #info-card button:hover {
