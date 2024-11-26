@@ -298,3 +298,76 @@
     font-weight: bold;
     color: #00ff99;
 }
+
+/* Botão para abrir o card */
+#info-btn {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #ff851b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-size: 0.9rem;
+}
+
+#info-btn:hover {
+    background-color: #ff6300;
+}
+
+/* Card de informações */
+#info-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+#info-card h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+#info-card ul {
+    text-align: left;
+    padding: 0;
+    list-style: none;
+}
+
+#info-card ul li {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+#info-card button {
+    background-color: #ff4136;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#info-card button:hover {
+    background-color: #e62e2e;
+}
+
+/* Ocultar card inicialmente */
+.hidden {
+    display: none;
+}
