@@ -47,6 +47,19 @@
 </div>
 
 
+<!-- Botão para abrir o card de informações -->
+<button id="info-btn" onclick="toggleInfoCard()">Como ganhar pontos?</button>
+
+<!-- Card com informações -->
+<div id="info-card" class="hidden">
+    <h2>Como ganhar pontos</h2>
+    <ul>
+        <li>Compartilhar o site uma vez por dia: <b>+3 pontos</b></li>
+        <li>Clicar no botão "Saiba mais": <b>+3 pontos</b></li>
+    </ul>
+    <button onclick="toggleInfoCard()">Fechar</button>
+</div>
+
     <nav id="sidebar" class="oculto">
     <div id="pontos-card">
         <h3>Seus Pontos</h3>
