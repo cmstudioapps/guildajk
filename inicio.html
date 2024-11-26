@@ -102,7 +102,7 @@
 
  <script src="recompensa.js"></script>
     <script>
-
+let pontos = Number(localStorage.getItem("pontos")) || 0;
 let data = new Date 
 let dia = data.getDate()
 let diaAnterior = localStorage.getItem ("diaAnterior")
@@ -161,7 +161,7 @@ function toggleInfoCard() {
         }
 
 // Recuperar os pontos do localStorage exibir
-let pontos = Number(localStorage.getItem("pontos")) || 0; // Define como 0 caso não existam pontos
+ 
 function carregarPontos() {
     
     document.getElementById("pontos").innerText = pontos;
@@ -220,7 +220,7 @@ function shar() {
 }
     </script>
     <script src="main.js">main.js</script>
- <script src="Date.js"></script>
+ 
 
 </body>
 </html>
