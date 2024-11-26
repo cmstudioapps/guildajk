@@ -276,3 +276,25 @@
 .videos-container::-webkit-scrollbar-track {
     background: transparent;
 }
+
+#pontos-card {
+    background: rgba(0, 51, 102, 0.9);
+    color: #00bfff;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#pontos-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+#pontos-card p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00ff99;
+}
