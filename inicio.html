@@ -164,7 +164,7 @@ function toggleInfoCard() {
  
 function carregarPontos() {
     
-    document.getElementById("pontos").innerText = pontos;
+    document.getElementById("pontos").innerText = localStorage.getItem("pontos");
 }
 
 // Chama a função ao carregar a página
