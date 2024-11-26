@@ -1,4 +1,4 @@
-let pontos = Number (localStorage.getItem("pontos"))
+
 let clicouSaiba = localStorage.getItem("clicouSaiba")
 function recompensaA() {
 
