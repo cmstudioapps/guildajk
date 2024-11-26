@@ -329,7 +329,7 @@
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    z-index: 1001;
+    z-index: 3000;
     text-align: center;
     width: 90%;
     max-width: 400px;
