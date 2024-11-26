@@ -146,6 +146,55 @@ function carregarPontos() {
 
 // Chama a função ao carregar a página
 carregarPontos();
+
+
+
+function shar() {
+
+  if(navigator.share) {
+
+  navigator.share({
+
+    title: "Guilda JK",
+    text: "https://guildajk.vercel.app"
+
+
+
+  })
+  .then(data => {
+
+    if(localStorage.getItem("compartilhou") == 0) {
+
+      compartilhou = 1
+      localStorage.setItem("compartilhou",compartilhou)
+
+      pontos = pontos +3
+
+      localStorage.setItem("pontos",pontos)
+
+      atualizarPontos()
+
+
+      alert("Obrigado por compartilhar! vc ganhou 2 pontos!")
+
+
+    } else {
+
+
+      alert("Obrigado por compartilhar!")
+
+    }
+
+
+  })
+  } else {
+
+    alert("Seu navegador não é compatível")
+
+
+  }
+
+}
     </script>
     <script src="main.js">main.js</script>
  
