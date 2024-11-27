@@ -173,12 +173,12 @@
     let souGuilda = localStorage.getItem ("souGuilda")
     
     
+   
     document.querySelector("form").addEventListener("submit", function (event) {
         event.preventDefault(); // Impede o envio padrão do formulário
-        
-        souGuilda = 1
-      
-      localStorage.setItem("souGuilda",souGuilda)
+
+        // Armazena no localStorage (opcional, depende do uso futuro)
+        localStorage.setItem("souGuilda", 1);
 
         // Coleta os valores preenchidos no formulário
         const nome = document.getElementById("nome").value;
@@ -186,25 +186,31 @@
         const idade = document.getElementById("idade").value;
         const posicao = document.getElementById("posicao").value;
         const mensagem = document.getElementById("mensagem").value;
-        const user = parser.getResult()
-        // Verifica se todos os campos foram preenchidos
-        if (!nome || !nickname || !idade || !posicao || !mensagem) {
-            alert("Por favor, preencha todos os campos.");
-            return;
+
+        // Verifica se a biblioteca UAParser foi carregada
+        let dispositivo = "Não identificado";
+        try {
+            const parser = new UAParser();
+            dispositivo = JSON.stringify(parser.getResult());
+        } catch (error) {
+            console.error("Erro ao identificar dispositivo:", error);
         }
 
-        // Número de WhatsApp que receberá os dados
-        const numeroWhatsApp = "5587991683353"; // Substitua pelo número desejado (inclua o código do país, como 55 para Brasil)
-
         // Mensagem formatada
-        const mensagemWhatsApp = `Olá, sou ${nome}!\n\nNickname: ${nickname}\nIdade: ${idade}\nPosição desejada: ${posicao}\nMotivo: ${mensagem}\n \n*Dispositivo:* \n \n${JSON
-.stringify(user)}`;
+        const mensagemWhatsApp = `Olá, sou ${nome}!\n\nNickname: ${nickname}\nIdade: ${idade}\nPosição desejada: ${posicao}\nMotivo: ${mensagem}\n\n*Dispositivo:* ${dispositivo}`;
+
+        // Número de WhatsApp que receberá os dados
+        const numeroWhatsApp = "5587991683353";
 
         // URL do WhatsApp com a mensagem
         const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagemWhatsApp)}`;
 
-        // Redireciona o usuário para o WhatsApp
-        window.open(url, "_blank");
+        // Redireciona para o WhatsApp
+        try {
+            window.open(url, "_blank");
+        } catch (error) {
+            alert("Não foi possível redirecionar para o WhatsApp. Por favor, tente novamente.");
+        }
     });
 </script>
 </body>
