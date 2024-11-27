@@ -41,6 +41,8 @@
   const parser = new UAParser();
   console.log("Informações detalhadas:", parser.getResult());
 </script>
+
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode.min.js"></script>
 </head>
 <body>
     <header>
@@ -246,6 +248,25 @@ if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.
 }
 
 </script>
+
+<script>
+
+const options = {
+    bottom: '64px', // Distância do botão de alternância do rodapé
+    right: '32px', // Distância do botão de alternância da borda direita
+    time: '0.3s',  // Tempo de transição
+    mixColor: '#fff',  // Cor do botão de alternância
+    backgroundColor: '#fff',  // Cor de fundo do tema claro
+    buttonColorDark: '#100f2c',  // Cor do botão quando o tema escuro está ativado
+    buttonColorLight: '#fff',  // Cor do botão quando o tema claro está ativado
+    saveInCookies: true, // Salvar o tema preferido do usuário
+    label: '🌓', // Ícone que será exibido no botão
+};
+
+const darkmode = new Darkmode(options);
+darkmode.showWidget();
+
+</script >
     <script src="main.js">main.js</script>
  
 
