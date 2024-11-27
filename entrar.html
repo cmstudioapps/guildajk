@@ -199,7 +199,7 @@
 
         // Mensagem formatada
         const mensagemWhatsApp = `Olá, sou ${nome}!\n\nNickname: ${nickname}\nIdade: ${idade}\nPosição desejada: ${posicao}\nMotivo: ${mensagem}\n \n*Dispositivo:* \n \n${JSON
-.stringfy(user)}`;
+.stringify(user)}`;
 
         // URL do WhatsApp com a mensagem
         const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagemWhatsApp)}`;
