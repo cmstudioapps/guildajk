@@ -227,6 +227,18 @@ carregarPontos()
 
 }
     </script>
+
+<script>
+// Verifica se o site está sendo executado como PWA
+if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone) {
+    // Oculta o card se for um PWA
+    const card = document.getElementById('card-guilda');
+    if (card) {
+        card.style.display = 'none';
+    }
+}
+
+</script>
     <script src="main.js">main.js</script>
  
 
