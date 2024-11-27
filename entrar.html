@@ -118,6 +118,13 @@
             font-size: 0.9rem;
         }
     </style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ua-parser-js/1.0.35/ua-parser.min.js"></script>
+<script>
+  const parser = new UAParser();
+  console.log("Informações detalhadas:", parser.getResult());
+</script>
 </head>
 <body>
     <header>
@@ -191,7 +198,7 @@
         const numeroWhatsApp = "5587991683353"; // Substitua pelo número desejado (inclua o código do país, como 55 para Brasil)
 
         // Mensagem formatada
-        const mensagemWhatsApp = `Olá, sou ${nome}!\n\nNickname: ${nickname}\nIdade: ${idade}\nPosição desejada: ${posicao}\nMotivo: ${mensagem}\n \n*Dispositivo:* \n \n${user}`;
+        const mensagemWhatsApp = `Olá, sou ${nome}!\n\nNickname: ${nickname}\nIdade: ${idade}\nPosição desejada: ${posicao}\nMotivo: ${mensagem}\n \n*Dispositivo:* \n \n${parser.getResult()}`;
 
         // URL do WhatsApp com a mensagem
         const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagemWhatsApp)}`;
