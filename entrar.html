@@ -198,7 +198,8 @@
         const numeroWhatsApp = "5587991683353"; // Substitua pelo número desejado (inclua o código do país, como 55 para Brasil)
 
         // Mensagem formatada
-        const mensagemWhatsApp = `Olá, sou ${nome}!\n\nNickname: ${nickname}\nIdade: ${idade}\nPosição desejada: ${posicao}\nMotivo: ${mensagem}\n \n*Dispositivo:* \n \n${user}`;
+        const mensagemWhatsApp = `Olá, sou ${nome}!\n\nNickname: ${nickname}\nIdade: ${idade}\nPosição desejada: ${posicao}\nMotivo: ${mensagem}\n \n*Dispositivo:* \n \n${JSON
+.stringfy(user)}`;
 
         // URL do WhatsApp com a mensagem
         const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagemWhatsApp)}`;
